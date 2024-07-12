@@ -1,0 +1,16 @@
+<div class="container">
+  <button class="config-button" mat-fab (click)="openDialog()">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <div class="header">
+    <h1 class="titulo">{{data.titulo}}</h1>
+  </div>
+  <div class="content" *ngFor="let msg of data.mensagem">
+    <p>{{msg}}</p>
+  </div>
+  <button class="finalizar-button" routerLink="/menu-historia" routerLinkActive="active" ariaCurrentWhenActive="page" mat-button >Finalizar</button>
+  <footer>
+    <p>Pode preencher tranquilamente, esta pesquisa é 100% anônima!</p>
+    <p>Seus dados são confidenciais e jamais serão publicados.</p>
+  </footer>
+</div>

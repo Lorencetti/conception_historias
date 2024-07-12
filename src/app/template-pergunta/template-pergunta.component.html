@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>{{ data.titulo }}</h1>
+    <ul class="options-list">
+      <li *ngFor="let option of data.opcoes">
+        <button
+          class="option-button"
+          (click)="onSelectOption(option)">
+          {{ option }}
+        </button>
+      </li>
+    </ul>
+    <button mat-button
+      class="continue-button"
+      (click)="continuar()"
+      [disabled]="!selectedOption">
+      {{ data.buttonText }}
+    </button>
+    <footer>
+        <p class="Tempo">Tempo estimado: 15 minutos</p>
+        <p>Pode preencher tranquilamente, esta pesquisa é 100% anônima!</p>
+        <p>Seus dados são confidenciais e jamais serão publicados.</p>
+    </footer>
+  </div>

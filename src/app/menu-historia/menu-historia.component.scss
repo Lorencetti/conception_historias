@@ -1,0 +1,47 @@
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    max-width: 200px;
+  }
+  
+  .scenarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .scenario {
+    width: 30%;
+    margin: 10px;
+  }
+  
+  .scenario.large {
+    width: 40%; 
+  }
+  
+  .scenario img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .scenario p {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 14px;
+    .Tempo {
+      color: gray;
+    }
+  }

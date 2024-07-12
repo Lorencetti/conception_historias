@@ -1,0 +1,17 @@
+<div class="visualizar-formulario">
+  <h1>Meus Formulários</h1>
+  <mat-selection-list #form (selectionChange)="onSelection($event)"  [multiple]="false">
+      @for (form of formularios; track form.id) {
+        <mat-list-option [value]="form.id">{{form.name}}</mat-list-option>
+      }
+  </mat-selection-list>
+  <mat-divider></mat-divider>
+  <mat-action-list>
+      <button mat-list-item (click)="visualizar()">Visualizar</button>
+      <button mat-list-item (click)="alterar()">Alterar</button>
+      <button mat-list-item (click)="deletar()">Deletar</button>
+  </mat-action-list>  
+  <p>
+      Selecionado: {{form.selectedOptions.hasValue() ? form.selectedOptions.selected[0].value : 'None'}}
+  </p>
+</div>

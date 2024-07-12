@@ -1,0 +1,69 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .options-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .option-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #a3c4f3;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .option-button.selected {
+    background-color: #2162c4;
+  }
+  
+  .option-button:hover {
+    background-color: #618fd4;
+  }
+  
+  .continue-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white !important;;
+    cursor: pointer;
+  }
+  
+  .continue-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .continue-button:hover:not(:disabled) {
+    background-color: #4b77c1;
+  }
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    .Tempo {
+      color: gray;
+    }
+  }

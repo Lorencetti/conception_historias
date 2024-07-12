@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="historiaTitle">{{ data.title }}</h1>
+    <h2 class="pageTitle">{{ data.subtitle }}</h2>
+    <p class="mainText">{{ data.text }}</p>
+    <img id="main-image" [src]="data.image" alt="Main Image">
+    <div class="buttons" *ngFor="let button of data.buttons; index as i">
+      <button  routerLink="/template-pergunta" routerLinkActive="active" ariaCurrentWhenActive="page" mat-button [id]="button.id" (click)="button_click(button.id)"> {{ button.text }}</button>
+    </div>
+    <footer>
+        <p class="Tempo">Tempo estimado: 15 minutos</p>
+        <p>Pode preencher tranquilamente, esta pesquisa é 100% anônima!</p>
+        <p>Seus dados são confidenciais e jamais serão publicados.</p>
+    </footer>
+</div>
