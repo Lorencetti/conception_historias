@@ -26,8 +26,12 @@ export class TemplatePerguntaComponent {
       "Nada acolhedora",
       "Prefiro não responder"
     ],
-    buttonText: "Continuar",
-    buttonNext: 1
+    "buttons": [
+      {
+        "text": "Continuar",
+        "id": "3"
+      }
+    ]
   };
 
   selectedOption: string | null = null;
@@ -36,25 +40,26 @@ export class TemplatePerguntaComponent {
     this.selectedOption = option;
   }
 
-  continuar() {
-    if (this.data.buttonNext == 1) {
-      this.data = {
-        titulo: "Qual o seu conhecimento sobre os tratamentos oferecidos pela Conception?",
-        opcoes: [
-          "Extenso conhecimento",
-          "Bom conhecimento",
-          "Neutra",
-          "Pouco conhecimento",
-          "conhecimento basico",
-          "Nenhum conhecimento"
-        ],
-        buttonText: "Continuar",
-        buttonNext: 0
-      };
-      this.selectedOption = null;
-    } else {
-      this.router.navigateByUrl("/agradecimento")
-    }
+  button_click(id: string) {
+    console.log(id, this.selectedOption)
+    // if (this.data.buttonNext == 1) {
+    //   this.data = {
+    //     titulo: "Qual o seu conhecimento sobre os tratamentos oferecidos pela Conception?",
+    //     opcoes: [
+    //       "Extenso conhecimento",
+    //       "Bom conhecimento",
+    //       "Neutra",
+    //       "Pouco conhecimento",
+    //       "conhecimento basico",
+    //       "Nenhum conhecimento"
+    //     ],
+    //     buttonText: "Continuar",
+    //     buttonNext: 0
+    //   };
+    //   this.selectedOption = null;
+    // } else {
+    //   this.router.navigateByUrl("/agradecimento")
+    // }
   }
 
 }

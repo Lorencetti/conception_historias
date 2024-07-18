@@ -9,12 +9,15 @@
         </button>
       </li>
     </ul>
-    <button mat-button
+    <div class="buttons" *ngFor="let button of data.buttons; index as i">
+      <button  class="continue-button" mat-button [id]="button.id" (click)="button_click(button.id)"> {{ button.text }}</button>
+    </div>
+    <!-- <button mat-button
       class="continue-button"
       (click)="continuar()"
       [disabled]="!selectedOption">
       {{ data.buttonText }}
-    </button>
+    </button> -->
     <footer>
         <p class="Tempo">Tempo estimado: 15 minutos</p>
         <p>Pode preencher tranquilamente, esta pesquisa é 100% anônima!</p>

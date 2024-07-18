@@ -1,10 +1,13 @@
 <div class="container">
     <h1 class="historiaTitle">{{ data.title }}</h1>
     <h2 class="pageTitle">{{ data.subtitle }}</h2>
-    <p class="mainText">{{ data.text }}</p>
+    <div class="content" *ngFor="let msg of data.text">
+      <p class="mainText">{{msg}}</p>
+    </div>
+    <!-- <p class="mainText">{{ data.text }}</p> -->
     <img id="main-image" [src]="data.image" alt="Main Image">
     <div class="buttons" *ngFor="let button of data.buttons; index as i">
-      <button  routerLink="/template-pergunta" routerLinkActive="active" ariaCurrentWhenActive="page" mat-button [id]="button.id" (click)="button_click(button.id)"> {{ button.text }}</button>
+      <button mat-button (click)="button_click(button.idNext)"> {{ button.text }}</button>
     </div>
     <footer>
         <p class="Tempo">Tempo estimado: 15 minutos</p>
